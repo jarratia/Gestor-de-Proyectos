@@ -1,2 +1,38 @@
-<h1>Pages#dashboard</h1>
-<p>Find me in app/views/pages/dashboard.html.erb</p>
+<h1 class="mt-5">Enter your Projects</h1>
+
+<form class="col-md-6 mt-5" id="create_projects" method="get" action="/pages/create">
+
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input name="name" type="text" class="form-control" id="project_name" placeholder="Enter Project Name">
+    </div>
+
+    <div class="form-group">
+        <label for="state">State</label>
+
+        <select class="custom-select">
+            <option value="proposal">Proposal</option>
+            <option value="in_progress">in progress</option>
+            <option value="finished">Finished</option>
+        </select>
+
+    </div>
+
+    <div class="form-group">
+        <label for="description">Description</label>
+        <textarea name="description" type="text" id="project_description" class="form-control">
+    </textarea>
+
+    <div class="form-group">
+        <label for="start">Start</label>
+        <input type="date" name="start" id="project_start" class="form-control" placeholder="Enter Start date"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="end">End</label>
+        <input type="date" name="end" id="project_end" class="form-control" placeholder="Enter End date"></input>
+    </div>
+
+    <button type="submit" class="btn btn-success form-control">Submit</button>
+
+</form>
