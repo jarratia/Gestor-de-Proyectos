@@ -13,9 +13,21 @@
   </head>
 
   <body>
-
     <div class="container">
-      <%= yield %>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link"><%= link_to "Index", pages_index_url%></a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link"><%= link_to "Dashboard", pages_dashboard_url%></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          
+          <%= yield %>
     </div>
 
   </body>
